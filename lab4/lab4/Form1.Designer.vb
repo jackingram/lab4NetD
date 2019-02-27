@@ -213,7 +213,7 @@ Partial Class frmMain
         '
         Me.cmbYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbYear.FormattingEnabled = True
-        Me.cmbYear.Items.AddRange(New Object() {"2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"})
+        Me.cmbYear.Items.AddRange(New Object() {"2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017"})
         Me.cmbYear.Location = New System.Drawing.Point(79, 69)
         Me.cmbYear.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmbYear.Name = "cmbYear"
