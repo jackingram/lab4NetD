@@ -9,3 +9,15 @@ c:\users\paolo\documents\visual studio 2015\Projects\CustomerList\CustomerList\o
 c:\users\paolo\documents\visual studio 2015\Projects\CustomerList\CustomerList\obj\Debug\CustomerList.exe
 c:\users\paolo\documents\visual studio 2015\Projects\CustomerList\CustomerList\obj\Debug\CustomerList.xml
 c:\users\paolo\documents\visual studio 2015\Projects\CustomerList\CustomerList\obj\Debug\CustomerList.pdb
+D:\Stuff Desktop\School\2ND SEMESTER\NETD\GitHub\lab4NetD\4. Example CustomerList\CustomerList\CustomerList\bin\Debug\CustomerList.exe.config
+D:\Stuff Desktop\School\2ND SEMESTER\NETD\GitHub\lab4NetD\4. Example CustomerList\CustomerList\CustomerList\bin\Debug\CustomerList.exe
+D:\Stuff Desktop\School\2ND SEMESTER\NETD\GitHub\lab4NetD\4. Example CustomerList\CustomerList\CustomerList\bin\Debug\CustomerList.pdb
+D:\Stuff Desktop\School\2ND SEMESTER\NETD\GitHub\lab4NetD\4. Example CustomerList\CustomerList\CustomerList\bin\Debug\CustomerList.xml
+D:\Stuff Desktop\School\2ND SEMESTER\NETD\GitHub\lab4NetD\4. Example CustomerList\CustomerList\CustomerList\obj\Debug\CustomerList.vbprojAssemblyReference.cache
+D:\Stuff Desktop\School\2ND SEMESTER\NETD\GitHub\lab4NetD\4. Example CustomerList\CustomerList\CustomerList\obj\Debug\CustomerList.frmCustomerList.resources
+D:\Stuff Desktop\School\2ND SEMESTER\NETD\GitHub\lab4NetD\4. Example CustomerList\CustomerList\CustomerList\obj\Debug\CustomerList.Resources.resources
+D:\Stuff Desktop\School\2ND SEMESTER\NETD\GitHub\lab4NetD\4. Example CustomerList\CustomerList\CustomerList\obj\Debug\CustomerList.vbproj.GenerateResource.cache
+D:\Stuff Desktop\School\2ND SEMESTER\NETD\GitHub\lab4NetD\4. Example CustomerList\CustomerList\CustomerList\obj\Debug\CustomerList.vbproj.CoreCompileInputs.cache
+D:\Stuff Desktop\School\2ND SEMESTER\NETD\GitHub\lab4NetD\4. Example CustomerList\CustomerList\CustomerList\obj\Debug\CustomerList.exe
+D:\Stuff Desktop\School\2ND SEMESTER\NETD\GitHub\lab4NetD\4. Example CustomerList\CustomerList\CustomerList\obj\Debug\CustomerList.xml
+D:\Stuff Desktop\School\2ND SEMESTER\NETD\GitHub\lab4NetD\4. Example CustomerList\CustomerList\CustomerList\obj\Debug\CustomerList.pdb

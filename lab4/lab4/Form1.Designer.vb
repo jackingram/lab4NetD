@@ -29,6 +29,7 @@ Partial Class frmMain
         Me.colMake = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.colModel = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.colYear = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.colPrice = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.chkNew = New System.Windows.Forms.CheckBox()
         Me.lblPrice = New System.Windows.Forms.Label()
         Me.lblModel = New System.Windows.Forms.Label()
@@ -41,17 +42,16 @@ Partial Class frmMain
         Me.btnEnter = New System.Windows.Forms.Button()
         Me.lblYear = New System.Windows.Forms.Label()
         Me.cmbYear = New System.Windows.Forms.ComboBox()
-        Me.colPrice = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.SuspendLayout()
         '
         'lbResult
         '
         Me.lbResult.BackColor = System.Drawing.SystemColors.Control
         Me.lbResult.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lbResult.Location = New System.Drawing.Point(4, 431)
+        Me.lbResult.Location = New System.Drawing.Point(15, 431)
         Me.lbResult.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbResult.Name = "lbResult"
-        Me.lbResult.Size = New System.Drawing.Size(491, 74)
+        Me.lbResult.Size = New System.Drawing.Size(620, 74)
         Me.lbResult.TabIndex = 20
         '
         'lvwCars
@@ -60,11 +60,11 @@ Partial Class frmMain
         Me.lvwCars.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.colNew, Me.colID, Me.colMake, Me.colModel, Me.colYear, Me.colPrice})
         Me.lvwCars.FullRowSelect = True
         Me.lvwCars.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
-        Me.lvwCars.Location = New System.Drawing.Point(13, 170)
-        Me.lvwCars.Margin = New System.Windows.Forms.Padding(4)
+        Me.lvwCars.Location = New System.Drawing.Point(15, 169)
+        Me.lvwCars.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.lvwCars.MultiSelect = False
         Me.lvwCars.Name = "lvwCars"
-        Me.lvwCars.Size = New System.Drawing.Size(482, 257)
+        Me.lvwCars.Size = New System.Drawing.Size(619, 258)
         Me.lvwCars.TabIndex = 19
         Me.lvwCars.UseCompatibleStateImageBehavior = False
         Me.lvwCars.View = System.Windows.Forms.View.Details
@@ -93,13 +93,18 @@ Partial Class frmMain
         Me.colYear.Text = "Year"
         Me.colYear.Width = 89
         '
+        'colPrice
+        '
+        Me.colPrice.Text = "Price"
+        Me.colPrice.Width = 99
+        '
         'chkNew
         '
         Me.chkNew.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.chkNew.Location = New System.Drawing.Point(40, 132)
-        Me.chkNew.Margin = New System.Windows.Forms.Padding(4)
+        Me.chkNew.Location = New System.Drawing.Point(8, 134)
+        Me.chkNew.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.chkNew.Name = "chkNew"
-        Me.chkNew.Size = New System.Drawing.Size(87, 30)
+        Me.chkNew.Size = New System.Drawing.Size(83, 30)
         Me.chkNew.TabIndex = 18
         Me.chkNew.Text = "&New:"
         Me.chkNew.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -107,7 +112,7 @@ Partial Class frmMain
         '
         'lblPrice
         '
-        Me.lblPrice.Location = New System.Drawing.Point(10, 102)
+        Me.lblPrice.Location = New System.Drawing.Point(-17, 105)
         Me.lblPrice.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPrice.Name = "lblPrice"
         Me.lblPrice.Size = New System.Drawing.Size(88, 16)
@@ -117,7 +122,7 @@ Partial Class frmMain
         '
         'lblModel
         '
-        Me.lblModel.Location = New System.Drawing.Point(15, 39)
+        Me.lblModel.Location = New System.Drawing.Point(-17, 42)
         Me.lblModel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblModel.Name = "lblModel"
         Me.lblModel.Size = New System.Drawing.Size(88, 16)
@@ -128,7 +133,7 @@ Partial Class frmMain
         '
         'lblMake
         '
-        Me.lblMake.Location = New System.Drawing.Point(15, 12)
+        Me.lblMake.Location = New System.Drawing.Point(-17, 15)
         Me.lblMake.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblMake.Name = "lblMake"
         Me.lblMake.Size = New System.Drawing.Size(88, 16)
@@ -140,35 +145,35 @@ Partial Class frmMain
         '
         Me.cmbMake.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbMake.FormattingEnabled = True
-        Me.cmbMake.Items.AddRange(New Object() {"Mr.", "Mrs.", "Miss.", "Ms.", "Mstr.", "Dr."})
-        Me.cmbMake.Location = New System.Drawing.Point(111, 9)
-        Me.cmbMake.Margin = New System.Windows.Forms.Padding(4)
+        Me.cmbMake.Items.AddRange(New Object() {"Volkswagon", "Hyundai", "Honda"})
+        Me.cmbMake.Location = New System.Drawing.Point(79, 11)
+        Me.cmbMake.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmbMake.Name = "cmbMake"
-        Me.cmbMake.Size = New System.Drawing.Size(160, 24)
+        Me.cmbMake.Size = New System.Drawing.Size(331, 24)
         Me.cmbMake.TabIndex = 13
         '
         'txtPrice
         '
-        Me.txtPrice.Location = New System.Drawing.Point(111, 99)
-        Me.txtPrice.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtPrice.Location = New System.Drawing.Point(79, 101)
+        Me.txtPrice.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtPrice.Name = "txtPrice"
-        Me.txtPrice.Size = New System.Drawing.Size(160, 22)
+        Me.txtPrice.Size = New System.Drawing.Size(331, 22)
         Me.txtPrice.TabIndex = 17
         '
         'txtModel
         '
-        Me.txtModel.Location = New System.Drawing.Point(111, 39)
-        Me.txtModel.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtModel.Location = New System.Drawing.Point(79, 42)
+        Me.txtModel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtModel.Name = "txtModel"
-        Me.txtModel.Size = New System.Drawing.Size(160, 22)
+        Me.txtModel.Size = New System.Drawing.Size(331, 22)
         Me.txtModel.TabIndex = 15
         '
         'btnExit
         '
-        Me.btnExit.Location = New System.Drawing.Point(279, 515)
-        Me.btnExit.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnExit.Location = New System.Drawing.Point(463, 514)
+        Me.btnExit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(100, 28)
+        Me.btnExit.Size = New System.Drawing.Size(172, 28)
         Me.btnExit.TabIndex = 23
         Me.btnExit.Text = "E&xit"
         Me.btnExit.UseVisualStyleBackColor = True
@@ -176,27 +181,27 @@ Partial Class frmMain
         'btnReset
         '
         Me.btnReset.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnReset.Location = New System.Drawing.Point(171, 515)
-        Me.btnReset.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnReset.Location = New System.Drawing.Point(239, 514)
+        Me.btnReset.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnReset.Name = "btnReset"
-        Me.btnReset.Size = New System.Drawing.Size(100, 28)
+        Me.btnReset.Size = New System.Drawing.Size(172, 28)
         Me.btnReset.TabIndex = 22
         Me.btnReset.Text = "&Reset"
         Me.btnReset.UseVisualStyleBackColor = True
         '
         'btnEnter
         '
-        Me.btnEnter.Location = New System.Drawing.Point(63, 515)
-        Me.btnEnter.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnEnter.Location = New System.Drawing.Point(19, 514)
+        Me.btnEnter.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnEnter.Name = "btnEnter"
-        Me.btnEnter.Size = New System.Drawing.Size(100, 28)
+        Me.btnEnter.Size = New System.Drawing.Size(172, 28)
         Me.btnEnter.TabIndex = 21
         Me.btnEnter.Text = "&Enter"
         Me.btnEnter.UseVisualStyleBackColor = True
         '
         'lblYear
         '
-        Me.lblYear.Location = New System.Drawing.Point(15, 70)
+        Me.lblYear.Location = New System.Drawing.Point(-17, 73)
         Me.lblYear.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblYear.Name = "lblYear"
         Me.lblYear.Size = New System.Drawing.Size(88, 16)
@@ -208,17 +213,12 @@ Partial Class frmMain
         '
         Me.cmbYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbYear.FormattingEnabled = True
-        Me.cmbYear.Items.AddRange(New Object() {"Mr.", "Mrs.", "Miss.", "Ms.", "Mstr.", "Dr."})
-        Me.cmbYear.Location = New System.Drawing.Point(111, 67)
-        Me.cmbYear.Margin = New System.Windows.Forms.Padding(4)
+        Me.cmbYear.Items.AddRange(New Object() {"2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"})
+        Me.cmbYear.Location = New System.Drawing.Point(79, 69)
+        Me.cmbYear.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmbYear.Name = "cmbYear"
-        Me.cmbYear.Size = New System.Drawing.Size(160, 24)
+        Me.cmbYear.Size = New System.Drawing.Size(331, 24)
         Me.cmbYear.TabIndex = 25
-        '
-        'colPrice
-        '
-        Me.colPrice.Text = "Price"
-        Me.colPrice.Width = 99
         '
         'frmMain
         '
@@ -226,7 +226,7 @@ Partial Class frmMain
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnReset
-        Me.ClientSize = New System.Drawing.Size(505, 553)
+        Me.ClientSize = New System.Drawing.Size(649, 553)
         Me.Controls.Add(Me.lblYear)
         Me.Controls.Add(Me.cmbYear)
         Me.Controls.Add(Me.lbResult)
@@ -242,6 +242,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.btnEnter)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmMain"
