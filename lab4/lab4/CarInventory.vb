@@ -116,7 +116,7 @@ Public Class CarInventory
     ''' Price property - Gets and Sets the price of the car
     ''' </summary>
     ''' <returns>Double</returns>
-    Public Property Year() As Double
+    Public Property Price() As Double
         Get
             Return carPrice
         End Get
@@ -126,7 +126,7 @@ Public Class CarInventory
     End Property
 
     Public Function GetData() As String
-
+        Return "Car: " + carMake + " " + carModel + " " + carYear + ". It is valued at " + carPrice + ". Condition: " + IIf(carIsNew = True, "New", "Used").ToString()
     End Function
 
 End Class

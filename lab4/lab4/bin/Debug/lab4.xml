@@ -22,5 +22,62 @@ lab4
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="M:lab4.CarInventory.AddCar">
+ <summary>
+ Constructor - Default - creates a new car object
+ </summary>
+</member>
+<member name="M:lab4.CarInventory.#ctor(System.String,System.String,System.Int32,System.Double,System.Boolean)">
+ <summary>
+ Constructor - Parameterized - created a new car object
+ </summary>
+ <param name="make"></param>
+ <param name="model"></param>
+ <param name="year"></param>
+ <param name="price"></param>
+ <param name="isNew"></param>
+</member>
+<member name="P:lab4.CarInventory.Count">
+ <summary>
+ Count ReadOnly Property - Gets the number of cars created/instantiated
+ </summary>
+ <returns>Integer</returns>
+</member>
+<member name="P:lab4.CarInventory.IdentificationNumber">
+ <summary>
+ IndentificationNumber ReadOnly Property - Gets the SPECIFIC ID number of a car.
+ </summary>
+ <returns>Integer</returns>
+</member>
+<member name="P:lab4.CarInventory.CarConditionStatus">
+ <summary>
+ CarConditionStatus Property - Gets AND Sets the car condition status (new / used --> true / false)
+ </summary>
+ <returns>Boolean</returns>
+</member>
+<member name="P:lab4.CarInventory.Make">
+ <summary>
+ Make - Gets and Sets the make of a car
+ </summary>
+ <returns>String</returns>
+</member>
+<member name="P:lab4.CarInventory.Model">
+ <summary>
+ Model property - Gets and Sets the model of a car
+ </summary>
+ <returns>String</returns>
+</member>
+<member name="P:lab4.CarInventory.Year">
+ <summary>
+ Year property - Gets and Sets the year of the car
+ </summary>
+ <returns>Integer</returns>
+</member>
+<member name="P:lab4.CarInventory.Price">
+ <summary>
+ Price property - Gets and Sets the price of the car
+ </summary>
+ <returns>Double</returns>
+</member>
 </members>
 </doc>
