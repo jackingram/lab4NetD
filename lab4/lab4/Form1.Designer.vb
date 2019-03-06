@@ -22,6 +22,7 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.lbResult = New System.Windows.Forms.Label()
         Me.lvwCars = New System.Windows.Forms.ListView()
         Me.colNew = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -42,6 +43,7 @@ Partial Class frmMain
         Me.btnEnter = New System.Windows.Forms.Button()
         Me.lblYear = New System.Windows.Forms.Label()
         Me.cmbYear = New System.Windows.Forms.ComboBox()
+        Me.toolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.SuspendLayout()
         '
         'lbResult
@@ -53,6 +55,7 @@ Partial Class frmMain
         Me.lbResult.Name = "lbResult"
         Me.lbResult.Size = New System.Drawing.Size(620, 74)
         Me.lbResult.TabIndex = 20
+        Me.toolTip1.SetToolTip(Me.lbResult, "Results for errors and such are shown here")
         '
         'lvwCars
         '
@@ -66,6 +69,7 @@ Partial Class frmMain
         Me.lvwCars.Name = "lvwCars"
         Me.lvwCars.Size = New System.Drawing.Size(619, 258)
         Me.lvwCars.TabIndex = 19
+        Me.toolTip1.SetToolTip(Me.lvwCars, "Car Information is listed here.")
         Me.lvwCars.UseCompatibleStateImageBehavior = False
         Me.lvwCars.View = System.Windows.Forms.View.Details
         '
@@ -108,6 +112,7 @@ Partial Class frmMain
         Me.chkNew.TabIndex = 18
         Me.chkNew.Text = "&New:"
         Me.chkNew.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.toolTip1.SetToolTip(Me.chkNew, "If Condition is NEW check box, otherwise leave unchecked.")
         Me.chkNew.UseVisualStyleBackColor = True
         '
         'lblPrice
@@ -151,6 +156,7 @@ Partial Class frmMain
         Me.cmbMake.Name = "cmbMake"
         Me.cmbMake.Size = New System.Drawing.Size(331, 24)
         Me.cmbMake.TabIndex = 13
+        Me.toolTip1.SetToolTip(Me.cmbMake, "Select Make")
         '
         'txtPrice
         '
@@ -159,6 +165,7 @@ Partial Class frmMain
         Me.txtPrice.Name = "txtPrice"
         Me.txtPrice.Size = New System.Drawing.Size(331, 22)
         Me.txtPrice.TabIndex = 17
+        Me.toolTip1.SetToolTip(Me.txtPrice, "Enter Price")
         '
         'txtModel
         '
@@ -167,6 +174,7 @@ Partial Class frmMain
         Me.txtModel.Name = "txtModel"
         Me.txtModel.Size = New System.Drawing.Size(331, 22)
         Me.txtModel.TabIndex = 15
+        Me.toolTip1.SetToolTip(Me.txtModel, "Enter Model")
         '
         'btnExit
         '
@@ -176,6 +184,7 @@ Partial Class frmMain
         Me.btnExit.Size = New System.Drawing.Size(172, 28)
         Me.btnExit.TabIndex = 23
         Me.btnExit.Text = "E&xit"
+        Me.toolTip1.SetToolTip(Me.btnExit, "Click here or press Alt + x to Exit the program")
         Me.btnExit.UseVisualStyleBackColor = True
         '
         'btnReset
@@ -187,6 +196,7 @@ Partial Class frmMain
         Me.btnReset.Size = New System.Drawing.Size(172, 28)
         Me.btnReset.TabIndex = 22
         Me.btnReset.Text = "&Reset"
+        Me.toolTip1.SetToolTip(Me.btnReset, "Click here or press ESC to reset the program")
         Me.btnReset.UseVisualStyleBackColor = True
         '
         'btnEnter
@@ -197,6 +207,7 @@ Partial Class frmMain
         Me.btnEnter.Size = New System.Drawing.Size(172, 28)
         Me.btnEnter.TabIndex = 21
         Me.btnEnter.Text = "&Enter"
+        Me.toolTip1.SetToolTip(Me.btnEnter, "Click here or press ENTER to enter car info")
         Me.btnEnter.UseVisualStyleBackColor = True
         '
         'lblYear
@@ -219,6 +230,7 @@ Partial Class frmMain
         Me.cmbYear.Name = "cmbYear"
         Me.cmbYear.Size = New System.Drawing.Size(331, 24)
         Me.cmbYear.TabIndex = 25
+        Me.toolTip1.SetToolTip(Me.cmbYear, "Enter Year")
         '
         'frmMain
         '
@@ -273,4 +285,5 @@ Partial Class frmMain
     Friend WithEvents lblYear As Label
     Friend WithEvents cmbYear As ComboBox
     Friend WithEvents colPrice As ColumnHeader
+    Friend WithEvents toolTip1 As ToolTip
 End Class
