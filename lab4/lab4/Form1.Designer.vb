@@ -61,7 +61,7 @@ Partial Class frmMain
         Me.lvwCars.FullRowSelect = True
         Me.lvwCars.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
         Me.lvwCars.Location = New System.Drawing.Point(15, 169)
-        Me.lvwCars.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.lvwCars.Margin = New System.Windows.Forms.Padding(4)
         Me.lvwCars.MultiSelect = False
         Me.lvwCars.Name = "lvwCars"
         Me.lvwCars.Size = New System.Drawing.Size(619, 258)
@@ -102,7 +102,7 @@ Partial Class frmMain
         '
         Me.chkNew.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.chkNew.Location = New System.Drawing.Point(8, 134)
-        Me.chkNew.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.chkNew.Margin = New System.Windows.Forms.Padding(4)
         Me.chkNew.Name = "chkNew"
         Me.chkNew.Size = New System.Drawing.Size(83, 30)
         Me.chkNew.TabIndex = 18
@@ -147,7 +147,7 @@ Partial Class frmMain
         Me.cmbMake.FormattingEnabled = True
         Me.cmbMake.Items.AddRange(New Object() {"Volkswagon", "Hyundai", "Honda"})
         Me.cmbMake.Location = New System.Drawing.Point(79, 11)
-        Me.cmbMake.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmbMake.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbMake.Name = "cmbMake"
         Me.cmbMake.Size = New System.Drawing.Size(331, 24)
         Me.cmbMake.TabIndex = 13
@@ -155,7 +155,7 @@ Partial Class frmMain
         'txtPrice
         '
         Me.txtPrice.Location = New System.Drawing.Point(79, 101)
-        Me.txtPrice.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtPrice.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPrice.Name = "txtPrice"
         Me.txtPrice.Size = New System.Drawing.Size(331, 22)
         Me.txtPrice.TabIndex = 17
@@ -163,7 +163,7 @@ Partial Class frmMain
         'txtModel
         '
         Me.txtModel.Location = New System.Drawing.Point(79, 42)
-        Me.txtModel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtModel.Margin = New System.Windows.Forms.Padding(4)
         Me.txtModel.Name = "txtModel"
         Me.txtModel.Size = New System.Drawing.Size(331, 22)
         Me.txtModel.TabIndex = 15
@@ -171,7 +171,7 @@ Partial Class frmMain
         'btnExit
         '
         Me.btnExit.Location = New System.Drawing.Point(463, 514)
-        Me.btnExit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnExit.Margin = New System.Windows.Forms.Padding(4)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(172, 28)
         Me.btnExit.TabIndex = 23
@@ -182,7 +182,7 @@ Partial Class frmMain
         '
         Me.btnReset.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnReset.Location = New System.Drawing.Point(239, 514)
-        Me.btnReset.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnReset.Margin = New System.Windows.Forms.Padding(4)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(172, 28)
         Me.btnReset.TabIndex = 22
@@ -192,7 +192,7 @@ Partial Class frmMain
         'btnEnter
         '
         Me.btnEnter.Location = New System.Drawing.Point(19, 514)
-        Me.btnEnter.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnEnter.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEnter.Name = "btnEnter"
         Me.btnEnter.Size = New System.Drawing.Size(172, 28)
         Me.btnEnter.TabIndex = 21
@@ -215,7 +215,7 @@ Partial Class frmMain
         Me.cmbYear.FormattingEnabled = True
         Me.cmbYear.Items.AddRange(New Object() {"2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017"})
         Me.cmbYear.Location = New System.Drawing.Point(79, 69)
-        Me.cmbYear.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmbYear.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbYear.Name = "cmbYear"
         Me.cmbYear.Size = New System.Drawing.Size(331, 24)
         Me.cmbYear.TabIndex = 25
