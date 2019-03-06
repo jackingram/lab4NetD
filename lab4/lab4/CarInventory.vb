@@ -1,4 +1,4 @@
-﻿
+﻿Option Strict On
 Public Class CarInventory
 
     Private Shared carCount As Integer                     ' shared provate variable to store nuber of cars in inventory
@@ -126,7 +126,7 @@ Public Class CarInventory
     End Property
 
     Public Function GetData() As String
-        Return "Car: " + carMake + " " + carModel + " " + carYear + ". It is valued at " + carPrice + ". Condition: " + IIf(carIsNew = True, "New", "Used").ToString()
+        Return "Car: " & carMake & " " & carModel & " " & carYear & ". It is valued at " & carPrice & ". Condition: " & IIf(carIsNew = True, "New", "Used").ToString()
     End Function
 
 End Class

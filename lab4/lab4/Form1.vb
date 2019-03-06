@@ -59,59 +59,38 @@ Public Class frmMain
                 ' from the controls
                 car.Make = cmbMake.Text
                 car.Model = txtModel.Text
-                car.Price = txtPrice.Text
+                car.Year = Convert.ToInt32(cmbYear.Text)
+                car.Price = Convert.ToDouble(txtPrice.Text)
                 car.CarConditionStatus = chkNew.Checked
             End If
 
             ' clear the items from the listview control
-            lvwCustomers.Items.Clear()
+            lvwCars.Items.Clear()
 
-            ' loop through the customerList collection
+            ' loop through the carList collection
             ' and populate the list view
-            For Each customerEntry As DictionaryEntry In customerList
+            For Each carEntry As DictionaryEntry In carList
 
                 ' instantiate a new ListViewItem
-                customerItem = New ListViewItem()
+                carItem = New ListViewItem()
 
                 ' get the customer from the list
-                customer = CType(customerEntry.Value, Customer)
+                car = CType(carEntry.Value, CarInventory)
 
                 ' assign the values to the ckecked control
                 ' and the subitems
-                customerItem.Checked = customer.VeryImportantPersonStatus
-                customerItem.SubItems.Add(customer.IdentificationNumber.ToString())
-                customerItem.SubItems.Add(customer.Title)
-                customerItem.SubItems.Add(customer.FirstName)
-                customerItem.SubItems.Add(customer.LastName)
+                carItem.Checked = car.CarConditionStatus
+                carItem.SubItems.Add(car.IdentificationNumber.ToString())
+                carItem.SubItems.Add(car.Make)
+                carItem.SubItems.Add(car.Model)
+                carItem.SubItems.Add(Convert.ToString(car.Year))
+                carItem.SubItems.Add(Convert.ToString(car.Price))
 
                 ' add the new instantiated and populated ListViewItem
                 ' to the listview control
-                lvwCustomers.Items.Add(customerItem)
+                lvwCars.Items.Add(carItem)
 
-            Next customerEntry
-
-            ' Alternate looping strategy
-            'For index As Integer = 0 To customerList.Count - 1
-
-            '    ' instantiate a new ListViewItem
-            '    customerItem = New ListViewItem()
-
-            '    ' get the customer from the list
-            '    customer = CType(customerList(customerList.GetKey(index)), Customer)
-
-            '    ' assign the values to the ckecked control
-            '    ' and the subitems
-            '    customerItem.Checked = customer.VeryImportantPersonStatus
-            '    customerItem.SubItems.Add(customer.IdentificationNumber.ToString())
-            '    customerItem.SubItems.Add(customer.Title)
-            '    customerItem.SubItems.Add(customer.FirstName)
-            '    customerItem.SubItems.Add(customer.LastName)
-
-            '    ' add the new instantiated and populated ListViewItem
-            '    ' to the listview control
-            '    lvwCustomers.Items.Add(customerItem)
-
-            'Next index
+            Next carEntry
 
             ' clear the controls
             Reset()
@@ -123,24 +102,95 @@ Public Class frmMain
 
     End Sub
 
-
-
-
-
-
     ''' <summary>
-    ''' Exits the program
+    ''' Event is declared as private because it is only accessible within the form
+    ''' The code in the btnReset_Click EventHandler will clear the form and set
+    ''' focus back to the input text box. 
     ''' </summary>
-    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
-        Application.Exit()
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
+
+        ' call the rest sub routine
+        Reset()
+
     End Sub
 
+    ''' <summary>
+    ''' Event is declared as private because it is only accessible within the form
+    ''' The code in the btnExit_Click EventHandler will close the application
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        'this closes the form. (^:
+        Me.Close()
+    End Sub
+
+    ''' <summary>
+    ''' lvwCars_ItemCheck - used to prevent the user from checking the check box in the list view
+    '''                        - if it is not in edit mode
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub lvwCars_ItemCheck(sender As Object, e As ItemCheckEventArgs) Handles lvwCars.ItemCheck
+
+        ' if it is not in edit mode
+        If editMode = False Then
+
+            ' the new value to the current value
+            ' so it cannot be set in the listview by the user
+            e.NewValue = e.CurrentValue
+
+        End If
+
+    End Sub
+
+    ''' <summary>
+    ''' lvwCars_SelectedIndexChanged - when the user selected a row in the list it will populate the fields for editing
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub lvwCars_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lvwCars.SelectedIndexChanged
+
+        ' constant that represents the index of the subitem in the list that
+        ' holds the car identification number 
+        Const identificationSubItemIndex As Integer = 1
+
+        ' Get the car identification number 
+        currentCarIdentificationNumber = lvwCars.Items(lvwCars.FocusedItem.Index).SubItems(identificationSubItemIndex).Text
+
+        ' Use the car identification number to get the car from the collection object
+        Dim car As CarInventory = CType(carList.Item(currentCarIdentificationNumber), CarInventory)
+
+        ' set the controls on the form
+        txtModel.Text = car.Model                    ' get the Modeland set the text box
+        txtPrice.Text = Convert.ToString(car.Price)  ' get the Price and set the text box
+        cmbMake.Text = car.Make                      ' get the title and set the combo box
+        chkNew.Checked = car.CarConditionStatus      ' get the very important person status and set the combo box
+
+        lbResult.Text = car.GetData()
+
+
+    End Sub
+
+    '' <------------------ FUNCTIONS ---------------------> 
+
+    ''' <summary>
+    ''' IsValidInput Function
+    '''                         |------>  Function checks if user input 
+    '''                                   is valid. Checks for blanks and
+    '''                                   checks if values are properly 
+    '''                                   inputed to allow for a smoother
+    '''                                   and simple input processing step. 
+    ''' </summary>
+    ''' <returns></returns>
     Private Function IsValidInput() As Boolean
 
         Dim returnValue As Boolean = True
         Dim outputMessage As String = String.Empty
 
-        ' check if the title has been selected
+        ' check if the make has been selected
         If cmbMake.SelectedIndex = -1 Then
 
             ' If not set the error message
@@ -151,7 +201,7 @@ Public Class frmMain
 
         End If
 
-        ' check if the title has been selected
+        ' check if the year has been selected
         If cmbYear.SelectedIndex = -1 Then
 
             ' If not set the error message
@@ -162,7 +212,7 @@ Public Class frmMain
 
         End If
 
-        ' check if the first name has been entered
+        ' check if the model has been entered
         If txtModel.Text.Trim.Length = 0 Then
 
             ' If not set the error message
@@ -173,7 +223,7 @@ Public Class frmMain
 
         End If
 
-        ' check if the first name has been entered
+        ' check if the price has been entered
         If txtPrice.Text.Trim.Length = 0 Then
 
             ' If not set the error message
@@ -182,7 +232,12 @@ Public Class frmMain
             ' And, set the return value to false
             returnValue = False
 
+        ElseIf 
+
+
         End If
+
+
 
         ' check to see if any value
         ' did not validate
@@ -199,5 +254,21 @@ Public Class frmMain
         Return returnValue
 
     End Function
+
+    ''' <summary>
+    ''' Resets the program by clearing prior input 
+    ''' </summary>
+    Private Sub Reset()
+
+        txtModel.Text = String.Empty
+        txtPrice.Text = String.Empty
+        chkNew.Checked = False
+        cmbMake.SelectedIndex = -1
+        cmbYear.SelectedIndex = -1
+        lbResult.Text = String.Empty
+
+        currentCarIdentificationNumber = String.Empty
+
+    End Sub
 
 End Class
