@@ -224,6 +224,7 @@ Public Class frmMain
         End If
 
         ' check if the price has been entered
+        Dim userInput As Double
         If txtPrice.Text.Trim.Length = 0 Then
 
             ' If not set the error message
@@ -232,8 +233,12 @@ Public Class frmMain
             ' And, set the return value to false
             returnValue = False
 
-        ElseIf 
+        ElseIf (Double.TryParse(txtPrice.Text, userInput) = False) Then
+            ' If not set the error message
+            outputMessage += "Please enter a valid NUMBER for Price! " & vbCrLf
 
+            ' And, set the return value to false
+            returnValue = False
 
         End If
 
